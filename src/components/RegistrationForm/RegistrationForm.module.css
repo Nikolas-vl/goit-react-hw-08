@@ -1,9 +1,21 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  
+}
+
 .form {
-  max-width: 350px;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 15px;
+  width: 350px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fdfdfd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .label {
@@ -41,4 +53,6 @@
   font-weight: 500;
   font-size: 14px;
   transition: color 0.3s ease;
+  text-align: center;
+
 }
