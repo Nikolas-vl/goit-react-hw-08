@@ -1,0 +1,26 @@
+.wrapper {
+  text-align: center;
+  padding: 50px;
+}
+
+.title {
+  font-size: 48px;
+  color: #ab3e3e;
+}
+
+.text {
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+.link {
+  font-size: 16px;
+  text-decoration: none;
+  color: #1976d2;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s;
+}
+
+.link:hover {
+  border-color: #1976d2;
+}
