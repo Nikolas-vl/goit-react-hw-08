@@ -5,9 +5,19 @@ import LoginPage from '../pages/LoginPage/LoginPage';
 import RegistrationPage from '../pages/RegistrationPage/RegistrationPage';
 import ContactsPage from '../pages/ContactsPage/ContactsPage';
 import Layout from './Layout/Layout';
+import { useDispatch, useSelector } from 'react-redux';
+import { refreshThunk } from '../redux/auth/operations';
+import { useEffect } from 'react';
+import { selectIsRefreshing } from '../redux/auth/selectors';
 
 const App = () => {
-  return (
+  const dispatch = useDispatch();
+  const isRefreshing = useSelector(selectIsRefreshing);
+  useEffect(() => {
+    dispatch(refreshThunk());
+  }, [dispatch]);
+
+  return isRefreshing ? null : (
     <div>
       <Routes>
         <Route path='/' element={<Layout />}>

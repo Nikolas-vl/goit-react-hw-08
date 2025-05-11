@@ -42,17 +42,14 @@ export const logoutThunk = createAsyncThunk('auth/logout', async (_, thunkAPI) =
   }
 });
 
-export const refreshUser = createAsyncThunk('auth/refresh', async (_, thunkAPI) => {
-  const state = thunkAPI.getState();
-  const persistedToken = state.auth.token;
-
-  if (persistedToken === null) {
-    return thunkAPI.rejectWithValue('Unable to fetch user');
-  }
-
+export const refreshThunk = createAsyncThunk('auth/refresh', async (_, thunkAPI) => {
   try {
-    setAuthHeader(persistedToken);
-    const res = await authApi.get('/users/me');
+    const savedToken = thunkAPI.getState().auth.token;
+    if (!savedToken) {
+      return thunkAPI.rejectWithValue('Unable to fetch user');
+    }
+    setAuthHeader(savedToken);
+    const res = await authApi.get('/users/current');
     return res.data;
   } catch (error) {
     return thunkAPI.rejectWithValue(error.message);
