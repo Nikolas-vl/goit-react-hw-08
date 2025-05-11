@@ -2,11 +2,16 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import s from './LoginForm.module.css';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { logInThunk } from '../../redux/auth/operations';
 
 const LoginForm = () => {
+  const dispatch = useDispatch();
+
   const initialValues = { email: '', password: '' };
 
   const handleSubmit = (values, actions) => {
+    dispatch(logInThunk(values));
     console.log(values);
     actions.setSubmitting(false);
   };

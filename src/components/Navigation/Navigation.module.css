@@ -1,7 +1,21 @@
+.wrapper{
+  display: flex;
+  justify-content: end;
+  gap: 100px;
+ align-items: baseline;
+
+}
+
+.text{
+  font-weight: 500;
+  font-size: 20px;
+}
+
 .nav{
  display: flex;
  gap: 20px;
- justify-content: center;
+ align-items: baseline;
+
 }
 
 .link{
@@ -18,3 +32,12 @@
  .active{
   color:#3cf1aecd 
  }
+
+ .btn {
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
