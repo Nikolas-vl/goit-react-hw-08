@@ -12,7 +12,6 @@ const LoginForm = () => {
 
   const handleSubmit = (values, actions) => {
     dispatch(logInThunk(values));
-    console.log(values);
     actions.setSubmitting(false);
   };
 
