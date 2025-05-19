@@ -1,6 +1,33 @@
-.input{
-  border:solid 1px  black;
-  margin-bottom: 10px;
-  padding-left: 5px;
-  border-radius: 3px;
+/* SearchBox.module.css */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  width: 100%;
+  margin-top: 20px; 
+  margin-bottom: 20px;
+}
+
+.input {
+  width: 100%;
+  max-width: 360px;
+  padding: 10px 14px;
+  font-size: 16px;
+  border: 1.5px solid #ccc;
+  border-radius: 12px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+}
+
+.input:focus {
+  border-color: #315eff;
+  box-shadow: 0 0 8px #315eff66;
+}
+
+p {
+  margin: 0 0 6px 0;
+  font-weight: 600;
+  font-size: 14px;
+  color: #4a5a7a;
 }

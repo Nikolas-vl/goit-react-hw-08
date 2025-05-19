@@ -1,27 +1,46 @@
-.container{
+/* Для Contact.module.css */
+.container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: solid 1px black;
-  max-width: 300px;
-  border-radius: 5px;
-  padding: 8px 10px 8px 8px;
+  max-width: 360px;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 8px 16px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  min-height: 48px; 
 }
 
-.info{
+.info {
+  padding-top: 8px;
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
 
-.item{
+.item {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
+  font-size: 16px;
+  color: #2c3e50;
+  margin: 0;
 }
 
-.btn{
-  height: 25px;
-  padding-left: 4px;
-  padding-right: 4px;
+.btn {
+  padding: 6px 12px;
+  background-color: #ff6b6b;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  outline: none; /* прибирає чорну рамку */
+}
+
+.btn:hover {
+  background-color: #e74c3c;
 }

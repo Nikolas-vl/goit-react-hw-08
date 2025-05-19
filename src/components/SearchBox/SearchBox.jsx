@@ -9,7 +9,7 @@ const SearchBox = () => {
   };
 
   return (
-    <div>
+    <div className={s.wrapper}>
       <p>Find contact by name</p>
       <input
         className={s.input}
@@ -17,7 +17,7 @@ const SearchBox = () => {
         onChange={e => {
           handleFilter(e.target.value);
         }}
-      ></input>
+      />
     </div>
   );
 };

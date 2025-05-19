@@ -1,5 +1,8 @@
-.list{
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  padding: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
